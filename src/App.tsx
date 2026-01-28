@@ -1,7 +1,7 @@
 import { Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Html, Float } from '@react-three/drei'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import * as THREE from 'three'
 
 // 极简几何体：Wireframe 二十面体
@@ -104,9 +104,7 @@ function SkillLine({ start, end }: { start: [number, number, number]; end: [numb
   const lineGeometry = new THREE.BufferGeometry().setFromPoints(points)
 
   return (
-    <line geometry={lineGeometry}>
-      <lineBasicMaterial color="#00ffff" transparent opacity={0.8} linewidth={3} />
-    </line>
+    <primitive object={new THREE.Line(lineGeometry, new THREE.LineBasicMaterial({ color: '#00ffff', transparent: true, opacity: 0.8 }))} />
   )
 }
 
@@ -155,7 +153,7 @@ function ParticleField() {
 function CameraController() {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null)
 
-  useFrame((state) => {
+  useFrame(() => {
     if (cameraRef.current) {
       const scrollY = window.scrollY || window.pageYOffset
       const targetZ = 8 - scrollY * 0.01
