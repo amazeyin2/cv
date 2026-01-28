@@ -199,37 +199,37 @@ function TerminalWindow() {
       initial={{ opacity: 0, ...(isMobile ? {} : { x: 50 }) }}
       animate={{ opacity: 1, ...(isMobile ? {} : { x: 0 }) }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="fixed left-1/2 -translate-x-1/2 bottom-[10%] md:left-auto md:right-[5%] md:translate-x-0 md:top-[20%] md:bottom-auto pointer-events-auto z-10"
+      className="fixed left-1/2 -translate-x-1/2 bottom-[18%] md:left-auto md:right-[5%] md:translate-x-0 md:top-[20%] md:bottom-auto pointer-events-auto z-10"
     >
-      <div className="w-[calc(100vw-2rem)] max-w-[400px] md:w-[450px] bg-black/80 backdrop-blur-md border border-cyber-cyan/30 rounded-lg overflow-hidden shadow-2xl">
+      <div className="w-[calc(100vw-2rem)] max-w-[360px] md:w-[450px] bg-black/80 backdrop-blur-md border border-cyber-cyan/30 rounded-lg overflow-hidden shadow-2xl">
         {/* 终端顶栏 */}
-        <div className="h-7 md:h-8 bg-gradient-to-b from-cyber-cyan/20 to-cyber-cyan/5 border-b border-cyber-cyan/30 flex items-center px-3">
+        <div className="h-6 md:h-8 bg-gradient-to-b from-cyber-cyan/20 to-cyber-cyan/5 border-b border-cyber-cyan/30 flex items-center px-3">
           <div className="flex gap-1.5 md:gap-2">
-            <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500/70"></div>
-            <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500/70"></div>
-            <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500/70"></div>
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-500/70"></div>
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-500/70"></div>
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-500/70"></div>
           </div>
-          <div className="flex-1 text-center text-cyber-cyan/60 text-[10px] md:text-xs font-light tracking-wider">
+          <div className="flex-1 text-center text-cyber-cyan/60 text-[9px] md:text-xs font-light tracking-wider">
             amazeyin - bash
           </div>
         </div>
 
         {/* 终端内容 */}
-        <div className="p-2.5 md:p-4 font-mono text-[9px] md:text-sm leading-relaxed space-y-1 md:space-y-2 max-h-[30vh] md:max-h-[350px] overflow-y-auto">
-          <div className="flex gap-1.5 md:gap-2 flex-wrap">
+        <div className="p-2 md:p-4 font-mono text-[8px] md:text-sm leading-relaxed space-y-0.5 md:space-y-2 max-h-[24vh] md:max-h-[350px] overflow-y-auto">
+          <div className="flex gap-1 md:gap-2 flex-wrap">
             <span className="text-green-400">root@amazeyin</span>
             <span className="text-blue-400">~</span>
             <span className="text-cyber-pale/60">cat /me.txt</span>
           </div>
-          <p className="text-cyber-pale/80 pl-1.5 md:pl-4">爱好计算机，会去自学自己感兴趣的一切东西</p>
-          <p className="text-cyber-pale/80 pl-1.5 md:pl-4">略懂Python，H5，C#开发；爱好折腾去解决一切问题</p>
-          <p className="text-cyber-pale/80 pl-1.5 md:pl-4">同时我也很喜欢玩硬件，raspberry Pi是我的最爱</p>
-          <p className="text-cyber-pale/80 pl-1.5 md:pl-4">这条路我才刚刚迈开了我的第一步</p>
-          <p className="text-cyber-pale/80 pl-1.5 md:pl-4">路上的坎一定会非常多，但</p>
-          <p className="text-cyber-pale/80 pl-1.5 md:pl-4">在我眼里</p>
-          <p className="text-cyber-pale/80 pl-1.5 md:pl-4">没有什么问题是尝试不能解决的，如果有那就多尝试几次甚至上百次</p>
-          <p className="text-cyber-cyan pl-1.5 md:pl-4 text-glow-sm">即使前方的路看似绝境，也要有硬生生给自己开出一条路的勇气</p>
-          <div className="flex gap-1.5 md:gap-2 mt-1.5 md:mt-3 flex-wrap">
+          <p className="text-cyber-pale/80 pl-1 md:pl-4">爱好计算机，会去自学自己感兴趣的一切东西</p>
+          <p className="text-cyber-pale/80 pl-1 md:pl-4">略懂Python，H5，C#开发；爱好折腾去解决一切问题</p>
+          <p className="text-cyber-pale/80 pl-1 md:pl-4">同时我也很喜欢玩硬件，raspberry Pi是我的最爱</p>
+          <p className="text-cyber-pale/80 pl-1 md:pl-4">这条路我才刚刚迈开了我的第一步</p>
+          <p className="text-cyber-pale/80 pl-1 md:pl-4">路上的坎一定会非常多，但</p>
+          <p className="text-cyber-pale/80 pl-1 md:pl-4">在我眼里</p>
+          <p className="text-cyber-pale/80 pl-1 md:pl-4">没有什么问题是尝试不能解决的，如果有那就多尝试几次甚至上百次</p>
+          <p className="text-cyber-cyan pl-1 md:pl-4 text-glow-sm">即使前方的路看似绝境，也要有硬生生给自己开出一条路的勇气</p>
+          <div className="flex gap-1 md:gap-2 mt-1 md:mt-3 flex-wrap">
             <span className="text-green-400">root@amazeyin</span>
             <span className="text-blue-400">~</span>
             <span className="text-cyber-pale/60">sudo rm -rf /过去的自己/*</span>
@@ -249,12 +249,12 @@ function ProfileCard() {
       initial={{ opacity: 0, ...(isMobile ? {} : { x: -50 }) }}
       animate={{ opacity: 1, ...(isMobile ? {} : { x: 0 }) }}
       transition={{ duration: 1, delay: 0.7 }}
-      className="fixed left-1/2 -translate-x-1/2 top-[20%] md:left-[10%] md:translate-x-0 md:top-[20%] pointer-events-auto z-10"
+      className="fixed left-1/2 -translate-x-1/2 top-[12%] md:left-[10%] md:translate-x-0 md:top-[20%] pointer-events-auto z-10"
     >
-      <div className="w-[calc(100vw-2rem)] max-w-[260px] md:w-[280px] bg-black/70 backdrop-blur-md border border-cyber-cyan/30 rounded-2xl overflow-hidden shadow-2xl hover:border-cyber-cyan/60 transition-all duration-300">
+      <div className="w-[calc(100vw-2rem)] max-w-[240px] md:w-[280px] bg-black/70 backdrop-blur-md border border-cyber-cyan/30 rounded-2xl overflow-hidden shadow-2xl hover:border-cyber-cyan/60 transition-all duration-300">
         {/* 头像 */}
-        <div className="pt-5 md:pt-8 pb-2.5 md:pb-4">
-          <div className="w-20 h-20 md:w-32 md:h-32 mx-auto rounded-full border-4 border-cyber-cyan/40 overflow-hidden hover:border-cyber-cyan hover:scale-105 transition-all duration-500">
+        <div className="pt-3 md:pt-8 pb-2 md:pb-4">
+          <div className="w-16 h-16 md:w-32 md:h-32 mx-auto rounded-full border-4 border-cyber-cyan/40 overflow-hidden hover:border-cyber-cyan hover:scale-105 transition-all duration-500">
             <img
               src="/img/header.jpeg"
               alt="Amazeyin"
@@ -265,12 +265,12 @@ function ProfileCard() {
 
         {/* 名字 */}
         <div className="text-center">
-          <h2 className="text-lg md:text-2xl font-light text-cyber-cyan text-glow tracking-widest">Amazeyin</h2>
-          <div className="w-4/5 h-px bg-gradient-to-r from-transparent via-cyber-cyan/50 to-transparent mx-auto my-2.5 md:my-4"></div>
+          <h2 className="text-base md:text-2xl font-light text-cyber-cyan text-glow tracking-widest">Amazeyin</h2>
+          <div className="w-4/5 h-px bg-gradient-to-r from-transparent via-cyber-cyan/50 to-transparent mx-auto my-2 md:my-4"></div>
         </div>
 
         {/* 介绍 */}
-        <div className="px-3 md:px-6 pb-3 md:pb-6 text-center space-y-0.5 md:space-y-2 text-[11px] md:text-sm text-cyber-pale/70">
+        <div className="px-3 md:px-6 pb-2 md:pb-6 text-center space-y-0.5 md:space-y-2 text-[10px] md:text-sm text-cyber-pale/70">
           <p>一条咸鱼🐟</p>
           <p>爱好计算机</p>
           <p>Java开发工程狮🦁</p>
@@ -284,7 +284,7 @@ function ProfileCard() {
             href="https://blog.csdn.net/qq_21917033"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 py-2 md:py-3 text-center text-cyber-light/60 text-[11px] md:text-sm hover:bg-cyber-cyan/10 hover:text-cyber-cyan transition-all duration-300 border-r border-cyber-cyan/20 active:bg-cyber-cyan/20"
+            className="flex-1 py-2 md:py-3 text-center text-cyber-light/60 text-[10px] md:text-sm hover:bg-cyber-cyan/10 hover:text-cyber-cyan transition-all duration-300 border-r border-cyber-cyan/20 active:bg-cyber-cyan/20"
           >
             关于
           </a>
@@ -292,7 +292,7 @@ function ProfileCard() {
             href="https://blog.csdn.net/qq_21917033"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 py-2 md:py-3 text-center text-cyber-light/60 text-[11px] md:text-sm hover:bg-cyber-cyan/10 hover:text-cyber-cyan transition-all duration-300 active:bg-cyber-cyan/20"
+            className="flex-1 py-2 md:py-3 text-center text-cyber-light/60 text-[10px] md:text-sm hover:bg-cyber-cyan/10 hover:text-cyber-cyan transition-all duration-300 active:bg-cyber-cyan/20"
           >
             联系
           </a>
