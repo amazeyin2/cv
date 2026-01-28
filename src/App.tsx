@@ -190,14 +190,16 @@ function Scene() {
   )
 }
 
-// 终端窗口组件（右侧）
+// 终端窗口组件（右侧，移动端下方）
 function TerminalWindow() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+
   return (
     <motion.div
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, ...(isMobile ? {} : { x: 50 }) }}
+      animate={{ opacity: 1, ...(isMobile ? {} : { x: 0 }) }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="fixed right-4 md:right-[5%] top-[15%] md:top-[20%] pointer-events-auto z-10 max-w-[calc(100vw-2rem)] md:max-w-none"
+      className="fixed left-1/2 -translate-x-1/2 bottom-[10%] md:left-auto md:right-[5%] md:translate-x-0 md:top-[20%] md:bottom-auto pointer-events-auto z-10"
     >
       <div className="w-[calc(100vw-2rem)] max-w-[400px] md:w-[450px] bg-black/80 backdrop-blur-md border border-cyber-cyan/30 rounded-lg overflow-hidden shadow-2xl">
         {/* 终端顶栏 */}
@@ -213,7 +215,7 @@ function TerminalWindow() {
         </div>
 
         {/* 终端内容 */}
-        <div className="p-2.5 md:p-4 font-mono text-[9px] md:text-sm leading-relaxed space-y-1 md:space-y-2 max-h-[40vh] md:max-h-[350px] overflow-y-auto">
+        <div className="p-2.5 md:p-4 font-mono text-[9px] md:text-sm leading-relaxed space-y-1 md:space-y-2 max-h-[30vh] md:max-h-[350px] overflow-y-auto">
           <div className="flex gap-1.5 md:gap-2 flex-wrap">
             <span className="text-green-400">root@amazeyin</span>
             <span className="text-blue-400">~</span>
@@ -238,14 +240,16 @@ function TerminalWindow() {
   )
 }
 
-// 个人卡片组件（左侧）
+// 个人卡片组件（左侧，移动端上方）
 function ProfileCard() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+
   return (
     <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, ...(isMobile ? {} : { x: -50 }) }}
+      animate={{ opacity: 1, ...(isMobile ? {} : { x: 0 }) }}
       transition={{ duration: 1, delay: 0.7 }}
-      className="fixed left-4 md:left-[10%] top-[15%] md:top-[20%] pointer-events-auto z-10 max-w-[calc(100vw-2rem)] md:max-w-none"
+      className="fixed left-1/2 -translate-x-1/2 top-[20%] md:left-[10%] md:translate-x-0 md:top-[20%] pointer-events-auto z-10"
     >
       <div className="w-[calc(100vw-2rem)] max-w-[260px] md:w-[280px] bg-black/70 backdrop-blur-md border border-cyber-cyan/30 rounded-2xl overflow-hidden shadow-2xl hover:border-cyber-cyan/60 transition-all duration-300">
         {/* 头像 */}
@@ -331,37 +335,39 @@ export default function App() {
         </motion.div>
 
         {/* 底部链接 */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 1.2 }}
-          className="absolute bottom-16 md:bottom-12 left-1/2 -translate-x-1/2 flex gap-4 md:gap-8 text-cyber-light/50 text-xs md:text-sm pointer-events-auto"
-        >
-          <a
-            href="https://blog.csdn.net/qq_21917033"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyber-cyan hover:text-glow-sm active:text-cyber-cyan transition-all duration-300"
+        <div className="absolute bottom-16 md:bottom-12 left-1/2 -translate-x-1/2 pointer-events-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 1.2 }}
+            className="flex gap-4 md:gap-8 text-cyber-light/50 text-xs md:text-sm"
           >
-            Blog
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyber-cyan hover:text-glow-sm active:text-cyber-cyan transition-all duration-300"
-          >
-            Note
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyber-cyan hover:text-glow-sm active:text-cyber-cyan transition-all duration-300"
-          >
-            McBlog
-          </a>
-        </motion.div>
+            <a
+              href="https://blog.csdn.net/qq_21917033"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyber-cyan hover:text-glow-sm active:text-cyber-cyan transition-all duration-300"
+            >
+              Blog
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyber-cyan hover:text-glow-sm active:text-cyber-cyan transition-all duration-300"
+            >
+              Note
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyber-cyan hover:text-glow-sm active:text-cyber-cyan transition-all duration-300"
+            >
+              McBlog
+            </a>
+          </motion.div>
+        </div>
 
         {/* ICP 备案 */}
         <motion.div
