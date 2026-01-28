@@ -251,7 +251,7 @@ function ProfileCard() {
       transition={{ duration: 1, delay: 0.7 }}
       className="fixed left-1/2 -translate-x-1/2 top-[12%] md:left-[10%] md:translate-x-0 md:top-[20%] pointer-events-auto z-10"
     >
-      <div className="w-[calc(100vw-2rem)] max-w-[240px] md:w-[280px] bg-black/70 backdrop-blur-md border border-cyber-cyan/30 rounded-2xl overflow-hidden shadow-2xl hover:border-cyber-cyan/60 transition-all duration-300">
+      <div className="w-[calc(100vw-2rem)] max-w-[280px] md:w-[320px] bg-black/70 backdrop-blur-md border border-cyber-cyan/30 rounded-2xl overflow-hidden shadow-2xl hover:border-cyber-cyan/60 transition-all duration-300">
         {/* 头像 */}
         <div className="pt-3 md:pt-8 pb-2 md:pb-4">
           <div className="w-16 h-16 md:w-32 md:h-32 mx-auto rounded-full border-4 border-cyber-cyan/40 overflow-hidden hover:border-cyber-cyan hover:scale-105 transition-all duration-500">
@@ -270,12 +270,17 @@ function ProfileCard() {
         </div>
 
         {/* 介绍 */}
-        <div className="px-3 md:px-6 pb-2 md:pb-6 text-center space-y-0.5 md:space-y-2 text-[10px] md:text-sm text-cyber-pale/70">
-          <p>一条咸鱼🐟</p>
-          <p>爱好计算机</p>
-          <p>Java开发工程狮🦁</p>
-          <p>瞎折腾浪费时间最在行</p>
-          <p>最爱🎮</p>
+        <div className="px-3 md:px-6 pb-2 md:pb-6 text-center space-y-0.5 md:space-y-2 text-[11px] md:text-sm text-cyber-pale/70">
+          <p>一条低调的咸鱼🐟</p>
+
+          <p>Java开发·工程狮🦁</p>
+          <p>沉迷代码 / 咖啡续命 ☕</p>
+
+          <p>独立思考，明辨是非🧠</p>
+          <p>瞎折腾是本能，浪费时间是艺术⚙️</p>
+
+          <p>与 AI 协作，而不被 AI 取代 🤖</p>
+          <p>🎮🕹️👾🎲🎧</p>
         </div>
 
         {/* 按钮 */}
